@@ -1,0 +1,150 @@
+/* Ensure mobile responsiveness across all components */
+
+/* Base responsive styles */
+@media (max-width: 640px) {
+  /* Typography adjustments for small screens */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Container padding adjustments */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Card and section spacing */
+  .p-6 {
+    padding: 1rem !important;
+  }
+  
+  .p-8 {
+    padding: 1.25rem !important;
+  }
+  
+  .mb-8 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Grid adjustments */
+  .grid {
+    gap: 1rem !important;
+  }
+}
+
+/* Navigation menu mobile styles */
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block !important;
+  }
+  
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .mobile-menu {
+    display: block !important;
+  }
+  
+  /* Profile section adjustments */
+  .profile-image-container {
+    width: 100% !important;
+    max-width: 250px !important;
+    margin: 0 auto 1.5rem auto !important;
+  }
+  
+  /* Document viewer adjustments */
+  .document-controls {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .document-controls button {
+    margin-top: 0.5rem !important;
+  }
+  
+  /* NotebookLM query form adjustments */
+  .query-form {
+    flex-direction: column !important;
+  }
+  
+  .query-form input {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Container padding adjustments */
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Grid adjustments for tablets */
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Touch-friendly adjustments */
+@media (hover: none) {
+  /* Increase tap target sizes */
+  button, 
+  a, 
+  select, 
+  input[type="submit"] {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  /* Add more space between interactive elements */
+  .touch-friendly-spacing > * {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  /* Increase form element sizes */
+  input, 
+  select, 
+  textarea {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+    padding: 0.75rem !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  /* Hide navigation, footer, and interactive elements */
+  nav, 
+  footer, 
+  button, 
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Ensure content is printable */
+  body {
+    font-size: 12pt !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  
+  /* Ensure links are readable */
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+  
+  /* Adjust page margins */
+  @page {
+    margin: 2cm;
+  }
+}
